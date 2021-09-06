@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class 設備管理bean{
     @Id
     @GeneratedValue
-    private Integer 管理番号;
+    private String 管理番号;
 
     @Column(nullable=false)
     private String 品名;
@@ -38,7 +38,7 @@ public class 設備管理bean{
     private String 減価償却;
 
     private Integer 使用不可;
-    private String 貸出可能;
+    private Integer 貸出可能;
 
     @Column(nullable=false)
     private String 設置場所;
