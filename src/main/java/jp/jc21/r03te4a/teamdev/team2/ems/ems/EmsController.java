@@ -14,14 +14,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/list")
 public class EmsController {
 
-  // EmsRepositoryの実装
-  @Autowired
+    @Autowired
   EmsRepository EmsRepository;
 
   @GetMapping
   String list(Model model) {
-    model.addAttribute("", EmsRepository.findAll());
-    return "/"; //TODO テンプレートファイルのパス
+    model.addAttribute("test", EmsRepository.findAll());
+    return "test";
   }
 
 }
