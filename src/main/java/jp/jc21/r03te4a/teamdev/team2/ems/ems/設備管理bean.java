@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class 設備管理bean{
     @Id
     @GeneratedValue
-    private Integer 管理番号;
+    private String 管理番号;
 
     @Column(nullable=false)
     private String 品名;
