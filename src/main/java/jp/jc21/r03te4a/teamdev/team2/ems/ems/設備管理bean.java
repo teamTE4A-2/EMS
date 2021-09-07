@@ -9,44 +9,63 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import org.springframework.data.mongodb.core.mapping.*;
+
 @Entity
-@Document(collation ="設備管理台帳")
+@Document(collection = "設備管理台帳")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class 設備管理bean{
     @Id
     @GeneratedValue
-    private String 管理番号;
+    private String id;
 
     @Column(nullable=false)
-    private String 品名;
+    @Field("品名")
+    private String name;
 
-    @Column(nullable=false)
-    private String 型番;
+    @Column(nullable=false, name="型番")
+    @Field("型番")
+    private String typenumber;
 
-    @Column(nullable=false)
-    private String メーカー;
+    @Column(nullable=false, name="メーカー")
+    @Field("メーカー")
+    private String maker;
 
-    @Column(nullable=false)
-    private String 仕様;
+    @Column(nullable=false, name = "仕様")
+    @Field("仕様")
+    private String siyou;
 
-    @Column(nullable=false)
-    private LocalDate 購入日;
+    @Column(nullable=false, name = "購入日")
+    @Field("購入日")
+    private LocalDate kounyubi;
 
-    @Column(nullable=false)
-    private Integer 耐用年数;
+    @Column(nullable=false, name="耐用年数")
+    @Field("耐用年数")
+    private Integer taiyounennsuu;
 
-    @Column(nullable=false)
-    private Integer 減価償却;
+    @Column(nullable=false, name = "減価償却")
+    @Field("減価償却")
+    private Integer genkasyoukyaku;
 
-    private Integer 使用不可;
-    private Integer 貸出可能;
+    @Column(name = "使用不能")
+    @Field("使用不能")
+    private Integer siyouhunou;
+    
+    @Column(name = "貸出可能")
+    @Field("貸出可能")
+    private Integer kasidasikanou;
 
-    @Column(nullable=false)
-    private String 設置場所;
+    @Column(nullable=false, name = "設置場所")
+    @Field("設置場所")
+    private String settibasyo;
 
-    private String 使用期限;
+    @Column(name = "使用期限")
+    @Field("使用期限")
+    private String siyoukigen;
 }
