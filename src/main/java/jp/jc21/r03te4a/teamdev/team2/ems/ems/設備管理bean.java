@@ -1,13 +1,22 @@
 package jp.jc21.r03te4a.teamdev.team2.ems.ems;
 
+import java.time.LocalDate;
+
 import javax.persistence.*;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import org.springframework.data.mongodb.core.mapping.*;
 
 @Entity
 @Document(collection = "設備管理台帳")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,15 +43,15 @@ public class 設備管理bean{
 
     @Column(nullable=false, name = "購入日")
     @Field("購入日")
-    private String kounyubi;
+    private LocalDate kounyubi;
 
     @Column(nullable=false, name="耐用年数")
     @Field("耐用年数")
-    private String taiyounennsuu;
+    private Integer taiyounennsuu;
 
     @Column(nullable=false, name = "減価償却")
     @Field("減価償却")
-    private String genkasyoukyaku;
+    private Integer genkasyoukyaku;
 
     @Column(name = "使用不能")
     @Field("使用不能")
