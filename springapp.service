@@ -1,0 +1,9 @@
+[Unit]
+Description = チーム開発用
+After = syslog.target
+
+[Service]
+ExecStart = /tmp/startSpringapp.sh
+Type = simple
+User = root
+Group = root
