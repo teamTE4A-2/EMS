@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../static/css/example.css" th:href="@{/css/example.css}">
+  <title>サンプルのサイト</title>
+</head>
+<body>
+  <header>
+  	<h1 class="headline">
+      <a>設備管理システム</a>
+    </h1>
+  </header>
+
+  <form>
+      <div>検索フォーム</div>
+  </form>
+
+  <table>
+    <!-- 行1（見出し）-->
+    <tr>
+      <th>管理番号</th> <th>型番</th><th>品名</th> <th>メーカー</th> <th>仕様</th>
+    　 <th>購入日</th> <th>耐用年数</th><th>減価償却</th> <th>使用不能</th> 
+    　<th>貸出可能</th><th>設置場所</th> <th>使用期限</th>
+    </tr>
+
+    <!-- 繰り返し -->
+    <tr th:each="test : ${list}">
+      <td th:text="${test.id}"></td> 
+      <td th:text="${test.name}"></td> 
+      <td th:text="${test.typenumber}"></td>
+      <td th:text="${test.maker}"></td> 
+      <td th:text="${test.siyou}"></td>
+      <td th:text="${test.kounyubi}"></td> 
+      <td th:text="${test.taiyounennsuu}"></td>
+
+      <!-- 減価償却か判定 だったら 終了 以外は空白-->
+      <td th:if="${test.genkasyoukyaku == 0}">終了</td>
+      <td th:if="${test.genkasyoukyaku != 0}"></td>
+
+
+      <!-- 使用不能か判定 不能だったら ○  以外は空白-->
+      <td th:if="${test.siyouhunou == 0}">○</td>
+      <td th:if="${test.siyouhunou != 0}"></td>
+
+      <!-- 貸出可能か判定 可能だったら ○ 以外は空白-->
+      <td th:if="${test.kasidasikanou == 0}">○</td>
+      <td th:if="${test.kasidasikanou != 0}"></td>
+
+      <td th:text="${test.settibasyo}"></td> 
+      <td th:text="${test.siyoukigen}"></td> 
+    </tr>
+  </table>
+
+</body>
+</html>
