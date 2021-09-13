@@ -25,7 +25,7 @@
     </tr>
 
     <!-- 繰り返し -->
-    <tr th:each="test : ${list}" th:styleappend="${test.genkasyoukyaku == 0 || test.siyouhunou == 0 }? 'background-color:black' ">
+    <tr th:each="test : ${list}" th:classappend="${(test.siyouhunou == 0 ? 'class1' : '') + (test.genkasyoukyaku == 0 ? 'class2' : '')}">
         <td th:text="${test.id}"></td> 
         <td th:text="${test.name}"></td> 
         <td th:text="${test.typenumber}"></td>
