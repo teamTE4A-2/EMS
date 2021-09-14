@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,4 +29,11 @@ public class EmsController {
   String update() {
     return "update";
   }
-}
+  @RequestMapping(value="/create",method=RequestMethod.POST)
+  String createAdd(@RequestBody 設備管理bean bean, Model model){
+    model.addAttribute("list", EmsRepository.findAll());
+    System.out.println(bean);
+    return "test";
+    }
+  }
+
