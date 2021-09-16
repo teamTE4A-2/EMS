@@ -68,4 +68,11 @@ public class 設備管理bean{
     @Column(name = "使用期限")
     @Field("使用期限")
     private String siyoukigen;
+
+    /*EmsControllerでHashMapを使い設置場所に該当するも値を渡し、EmsRepositoryで値を渡す。
+    　データベースに新しいテーブルを作る方法も考えたが、作業量と手を加える範囲をの増加を考え上記の案を採用。
+    */
+    @Column(name = "place_id")
+    @Field("place_id")
+    private Integer placeid;
 }
