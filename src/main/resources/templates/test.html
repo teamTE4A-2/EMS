@@ -25,30 +25,30 @@
     </tr>
 
     <!-- 繰り返し -->
-    <tr th:each="test : ${list}">
-      <td th:text="${test.id}"></td> 
-      <td th:text="${test.name}"></td> 
-      <td th:text="${test.typenumber}"></td>
-      <td th:text="${test.maker}"></td> 
-      <td th:text="${test.siyou}"></td>
-      <td th:text="${test.kounyubi}"></td> 
-      <td th:text="${test.taiyounennsuu}"></td>
+    <tr th:each="test : ${list}" th:classappend="${(test.siyouhunou == 0 ? 'class1' : '') + (test.genkasyoukyaku == 0 ? 'class2' : '')}">
+        <td th:text="${test.id}"></td> 
+        <td th:text="${test.name}"></td> 
+        <td th:text="${test.typenumber}"></td>
+        <td th:text="${test.maker}"></td> 
+        <td th:text="${test.siyou}"></td>
+        <td th:text="${test.kounyubi}"></td> 
+        <td th:text="${test.taiyounennsuu}"></td>
 
-      <!-- 減価償却か判定 だったら 終了 以外は空白-->
-      <td th:if="${test.genkasyoukyaku == 0}">終了</td>
-      <td th:if="${test.genkasyoukyaku != 0}"></td>
+        <!-- 減価償却か判定 だったら 終了 以外は空白-->
+        <td th:if="${test.genkasyoukyaku == 0}">終了</td>
+        <td th:if="${test.genkasyoukyaku != 0}"></td>
 
 
-      <!-- 使用不能か判定 不能だったら ○  以外は空白-->
-      <td th:if="${test.siyouhunou == 0}">○</td>
-      <td th:if="${test.siyouhunou != 0}"></td>
+        <!-- 使用不能か判定 不能だったら ○  以外は空白-->
+        <td th:if="${test.siyouhunou == 0}">○</td>
+        <td th:if="${test.siyouhunou != 0}"></td>
 
-      <!-- 貸出可能か判定 可能だったら ○ 以外は空白-->
-      <td th:if="${test.kasidasikanou == 0}">○</td>
-      <td th:if="${test.kasidasikanou != 0}"></td>
+        <!-- 貸出可能か判定 可能だったら ○ 以外は空白-->
+        <td th:if="${test.kasidasikanou == 0}">○</td>
+        <td th:if="${test.kasidasikanou != 0}"></td>
 
-      <td th:text="${test.settibasyo}"></td> 
-      <td th:text="${test.siyoukigen}"></td> 
+        <td th:text="${test.settibasyo}"></td> 
+        <td th:text="${test.siyoukigen}"></td> 
     </tr>
   </table>
 
