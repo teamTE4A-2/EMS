@@ -44,8 +44,6 @@ public class EmsController {
   @RequestMapping(value="/create",method=RequestMethod.POST)
   String postCreate(@ModelAttribute 設備管理bean bean, Model model){
     bean.setPlaceid(map.get(bean.getSettibasyo()));
-
-
     emsRepository.save(bean);
     System.out.println(bean);
     return "redirect:test";
@@ -57,7 +55,8 @@ public class EmsController {
   }
 
   @RequestMapping(value="/update",method=RequestMethod.POST)
-  String PostCreate(){
+  String postUpdate(@ModelAttribute 設備管理bean bean, Model model){
+  
 
     return "redirect:test";
     }
