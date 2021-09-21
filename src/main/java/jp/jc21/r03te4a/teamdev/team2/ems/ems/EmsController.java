@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+
 public class EmsController {
 
   Map<String, Integer> map = new HashMap<String, Integer>(){
@@ -28,7 +29,8 @@ public class EmsController {
 
   @Autowired
   EmsRepository EmsRepository;
-  @GetMapping("/list")
+
+  @RequestMapping("/list")
   String list(Model model) {
     Sort sort = Sort.by("placeid").ascending();
     model.addAttribute("list", EmsRepository.findAll(sort));
@@ -49,4 +51,9 @@ public class EmsController {
   String update() {
     return "update";
   }
+  @RequestMapping("/create")
+  String create() {
+    return "create";
+  }
+
 }
