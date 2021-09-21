@@ -8,6 +8,19 @@
     background-color: #180085;
     color: white;
   }
+
+  .btn{
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    padding: 10px 30px;
+    
+    display: block;
+    text-decoration: none;
+    color: white;
+    float: right;
+  }
+
   header .headline{
       line-height: 40px;
       float: left;
