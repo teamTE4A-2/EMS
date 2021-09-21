@@ -28,33 +28,38 @@ public class EmsController {
   };
 
   @Autowired
-  EmsRepository EmsRepository;
+  EmsRepository emsRepository;
   @GetMapping("/list")
   String list(Model model) {
     Sort sort = Sort.by("placeid").ascending();
-    model.addAttribute("list", EmsRepository.findAll(sort));
+    model.addAttribute("list", emsRepository.findAll(sort));
     return "test";
+  }
+  
+  @RequestMapping(value="/create",method=RequestMethod.GET)
+  String getCreate(){
+    return "create";
   }
 
   @RequestMapping(value="/create",method=RequestMethod.POST)
-  String createAdd(@ModelAttribute 設備管理bean bean, Model model){
+  String postCreate(@ModelAttribute 設備管理bean bean, Model model){
     bean.setPlaceid(map.get(bean.getSettibasyo()));
 
 
-    // emsrepository.save(bean);
+    emsRepository.save(bean);
     System.out.println(bean);
-    return "test";
+    return "redirect:test";
     }
     
   @RequestMapping(value="/update",method=RequestMethod.GET)
-  String update() {
+  String getUpdate() {
     return "update";
   }
-  @RequestMapping(value="/create",method=RequestMethod.POST)
-  String createAdd(@RequestBody 設備管理bean bean, Model model){
-    model.addAttribute("list", EmsRepository.findAll());
-    System.out.println(bean);
-    return "test";
+
+  @RequestMapping(value="/update",method=RequestMethod.POST)
+  String PostCreate(){
+
+    return "redirect:test";
     }
   }
 
