@@ -2,7 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../static/css/example.css" th:href="@{/css/example.css}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../static/css/create.css" th:href="@{/css/create.css}">
+  
   <title>サンプルのサイト</title>
 </head>
 <body>
@@ -13,6 +15,128 @@
   </header>
 
 
+  <form>
+
+    <div class="rendered-form">
+      <div class="formbuilder-text form-group field-text-1631766180015">
+          <label for="text-1631766180015" class="formbuilder-text-label">品名</label>
+          <input type="text" class="form-control" name="name" access="false" id="text-1631766180015">
+      </div><br>
+
+      <div class="formbuilder-text form-group field-text-1631766176728">
+          <label for="text-1631766176728" class="formbuilder-text-label">型番</label>
+          <input type="text" class="form-control" name="typenumber" access="false" id="text-1631766176728">
+      </div><br>
+
+
+      <div class="formbuilder-text form-group field-text-1631768944479">
+          <label for="text-1631768944479" class="formbuilder-text-label">メーカ</label>
+          <input type="text" class="form-control" name="maker" access="false" id="text-1631768944479">
+      </div><br>
+
+
+      <div class="formbuilder-text form-group field-text-1631768946215">
+          <label for="text-1631768946215" class="formbuilder-text-label">仕様</label>
+          <input type="text" class="form-control" name="siyou" access="false" id="text-1631768946215">
+      </div><br>
+
+
+      <div class="formbuilder-date form-group field-date-1631768957087">
+          <label for="date-1631768957087" class="formbuilder-date-label">購入日</label>
+          <input type="date" class="form-control" name="kounyubi" access="false" id="date-1631768957087">
+      </div><br>
+
+
+      <div class="formbuilder-text form-group field-text-1631768973246">
+          <label for="text-1631768973246" class="formbuilder-text-label">耐用年数</label>
+          <input type="number" class="form-control" name="taiyounennsuu" access="false" id="text-1631768973246">
+      </div><br>
+
+
+      <div class="formbuilder-text form-group field-text-1631768969079">
+          <label for="text-1631768969079" class="formbuilder-text-label">減価償却</label>
+          <input type="number" class="form-control" name="genkasyoukyaku" access="false" id="text-1631768969079">
+      </div><br>
+
+
+      <div class="rendered-form">
+            <div class="formbuilder-radio-group form-group field-radio-group-1631771911978">
+                <label for="radio-group-1631771911978" class="formbuilder-radio-group-label">使用不能</label>
+                <div class="radio-group">
+                    <div class="formbuilder-radio">
+                        <input name="radio-group-1631771911978" access="false" id="radio-group-1631771911978-0" value="option-1" type="radio">
+                        <label for="radio-group-1631771911978-0">はい</label>
+                    </div>
+                    <div class="formbuilder-radio">
+                        <input name="radio-group-1631771911978" access="false" id="radio-group-1631771911978-1" value="option-2" type="radio">
+                        <label for="radio-group-1631771911978-1">いいえ</label>
+                    </div>
+                </div>
+            </div>
+      </div><br>
+
+
+      <div class="formbuilder-radio-group form-group field-radio-group-1631769014834">
+          <label for="radio-group-1631769014834" class="formbuilder-radio-group-label">貸出可能</label>
+          <div class="radio-group">
+              <div class="formbuilder-radio">
+                  <input name="radio-group-1631769014834" access="false" id="radio-group-1631769014834-0" value="option-1" type="radio">
+                  <label for="radio-group-1631769014834-0">はい</label>
+              </div>
+              <div class="formbuilder-radio">
+                  <input name="radio-group-1631769014834" access="false" id="radio-group-1631769014834-1" value="option-2" type="radio">
+                  <label for="radio-group-1631769014834-1">いいえ</label>
+              </div>
+          </div>
+      </div><br>
+
+
+      <div class="formbuilder-radio-group form-group field-radio-group-1631769019017">
+          <label for="radio-group-1631769019017" class="formbuilder-radio-group-label">設置場所</label>
+          <div class="radio-group">
+              <div class="formbuilder-radio">
+                  <input name="radio-group-1631769019017" access="false" id="radio-group-1631769019017-0" value="option-1" type="radio">
+                  <label for="radio-group-1631769019017-0">仙台</label>
+              </div>
+              <div class="formbuilder-radio">
+                  <input name="radio-group-1631769019017" access="false" id="radio-group-1631769019017-1" value="option-2" type="radio">
+                  <label for="radio-group-1631769019017-1">新潟</label>
+              </div>
+              <div class="formbuilder-radio">
+                  <input name="radio-group-1631769019017" access="false" id="radio-group-1631769019017-2" type="radio">
+                  <label for="radio-group-1631769019017-2">埼玉</label>
+              </div>
+              <div class="formbuilder-radio">
+                  <input name="radio-group-1631769019017" access="false" id="radio-group-1631769019017-3" type="radio">
+                  <label for="radio-group-1631769019017-3">東京</label>
+              </div>
+              <div class="formbuilder-radio">
+                <input name="radio-group-1631769019017" access="false" id="radio-group-1631769019017-3" type="radio">
+                <label for="radio-group-1631769019017-3">横浜</label>
+            </div>
+            <div class="formbuilder-radio">
+              <input name="radio-group-1631769019017" access="false" id="radio-group-1631769019017-3" type="radio">
+              <label for="radio-group-1631769019017-3">大阪</label>
+          </div>
+          </div>
+      </div><br>
+
+
+      <div class="formbuilder-date form-group field-date-1631769041848">
+          <label for="date-1631769041848" class="formbuilder-date-label">使用期限</label>
+          <input type="date" class="form-control" name="siyoukigen" access="false" id="date-1631769041848">
+      </div><br>
+
+
+      <div class="rendered-form">
+            <div class="formbuilder-button form-group field-button-1631772181369">
+                <button type="submit" action="" class="btn-default btn" name="button-1631772181369" access="false" style="default" id="button-1631772181369">送信</button>
+            </div>
+        </div><br>
+
+  </div>
+
+  </form>
 
 </body>
 </html>

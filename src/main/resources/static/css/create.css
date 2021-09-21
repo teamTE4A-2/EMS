@@ -1,0 +1,26 @@
+* {
+    margin:0; padding:0;
+  }
+  header {
+    height: 70px;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #180085;
+    color: white;
+  }
+  .formbuilder-radio{
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+  header .headline{
+      line-height: 40px;
+      float: left;
+      font-size: 20px;
+      margin-left: 100px;
+  }
+  th, td {
+    border: solid 1px #333; /* 線の種類 太さ 色 */
+  }
+  
