@@ -5,9 +5,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ main, dev, Sprint*Release ]
+    branches: [ main, dev*, Sprint*Release ]
   pull_request:
-    branches: [ main, dev, Sprint*Release ]
+    branches: [ main, dev*, Sprint*Release ]
 
 jobs:
   build:

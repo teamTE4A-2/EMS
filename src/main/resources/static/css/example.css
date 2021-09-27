@@ -8,6 +8,19 @@
     background-color: #180085;
     color: white;
   }
+
+  .btn{
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    padding: 10px 30px;
+    
+    display: block;
+    text-decoration: none;
+    color: white;
+    float: right;
+  }
+
   header .headline{
       line-height: 40px;
       float: left;
@@ -18,6 +31,17 @@
     border-collapse: collapse;
     width: 100%;
   }
+
+  .class1{
+    background-color:black;
+
+  }
+
+  .class2{
+    background-color:rgb(132, 151, 255);
+
+  }
+  
   th, td {
     border: solid 1px #333; /* 線の種類 太さ 色 */
   }

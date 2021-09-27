@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java -jar /tmp/demo-0.0.1-SNAPSHOT.jar
+java -jar /tmp/ems-0.0.1-SNAPSHOT.jar
